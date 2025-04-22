@@ -40,10 +40,11 @@ class MedicoDAO extends MysqlFactory implements IMedicoDAO {
         return $retorno;
     }
     
-    public function excluir($id) {
-        $sql = "DELETE FROM medicos WHERE id = :id";
-        $param = [":id" => $id];
-        $retorno = $this->banco->executar($sql, $param);
-        return $retorno;
-    }
+    
+public function excluir($id) {
+    $sql = "DELETE FROM medicos WHERE id = :id";
+    $param = [":id" => $id];
+    $retorno = $this->banco->executar($sql, $param);
+    return $retorno;
+}
 }
