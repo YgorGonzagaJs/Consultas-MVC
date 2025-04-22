@@ -4,7 +4,7 @@ $titulo = ($paciente != null) ? "Editar Paciente" : "Cadastrar Paciente";
 $acao = ($paciente != null) ? "/mvc-consultas/paciente/alterar" : "/mvc-consultas/paciente/inserir";
 ?>
 
-<h2><?= $titulo ?></h2>
+<h2 class="titulo"><?= $titulo ?></h2>
 
 <form method="POST" action="<?= $acao ?>" class="ptrn">
     <div class="ptrn">

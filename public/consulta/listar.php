@@ -1,19 +1,22 @@
 <h2>Consultas Agendadas</h2>
+<p> Verifique seus próximos agendamentos ou agende uma nova consulta com facilidade.</p>
 
 <?php
 if (isset($_GET['info'])) {
-    $info = $_GET['info'];
-    if ($info == 1) {
-        echo '<div class="alert alert-success">Consulta agendada com sucesso!</div>';
-    } elseif ($info == 2) {
-        echo '<div class="alert alert-success">Consulta alterada com sucesso!</div>';
-    } elseif ($info == 3) {
-        echo '<div class="alert alert-success">Consulta excluída com sucesso!</div>';
+    $mensagem = '';
+    if ($_GET['info'] == 1) {
+        $mensagem = 'Consulta agendadaa com sucesso!';
+    } elseif ($_GET['info'] == 2) {
+        $mensagem = 'Consulta alterada com sucesso!';
+    } elseif ($_GET['info'] == 3) {
+        $mensagem = 'Consulta excluída com sucesso!';
+    }
+
+    if ($mensagem !== '') {
+        echo "<script>alert('$mensagem');</script>";
     }
 }
 ?>
-
-<a href="/mvc-consultas/consulta/formulario" class="btn-cad3">Agendar Nova Consulta</a>
 
 <?php if (!empty($parametro)) : ?>
     <table class="table-tb">
@@ -52,3 +55,5 @@ if (isset($_GET['info'])) {
         Nenhuma consulta agendada no momento.
     </div>
 <?php endif; ?>
+
+<a href="/mvc-consultas/consulta/formulario" button class="btn-ag">Agendar Consulta</a>
