@@ -21,7 +21,7 @@ class Consulta {
     public function inserir() {
         $paciente_id = $_POST["paciente_id"];
         $medico_id = $_POST["medico_id"];
-        $data_consulta = $_POST["data_consulta"];
+        $data_consulta = str_replace('T', ' ', $_POST["data_consulta"]);
         $observacoes = $_POST["observacoes"];
         
         $service = new ConsultaService();
@@ -63,7 +63,7 @@ class Consulta {
         $id = $_POST["id"];
         $paciente_id = $_POST["paciente_id"];
         $medico_id = $_POST["medico_id"];
-        $data_consulta = $_POST["data_consulta"];
+        $data_consulta = str_replace('T', ' ', $_POST["data_consulta"]); 
         $observacoes = $_POST["observacoes"];
         
         $service = new ConsultaService();

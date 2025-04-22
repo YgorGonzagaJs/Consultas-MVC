@@ -21,7 +21,6 @@ if (isset($_GET['info'])) {
     <table class="table-tb">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Ações</th>
@@ -30,7 +29,6 @@ if (isset($_GET['info'])) {
         <tbody>
             <?php foreach ($parametro as $p) : ?>
                 <tr>
-                    <td><?= $p["id"] ?></td>
                     <td><?= $p["nome"] ?></td>
                     <td><?= $p["email"] ?></td>
                     <td>

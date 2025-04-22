@@ -31,7 +31,8 @@ class SistemaTemp implements ITemplate {
         </div>
     </nav>
 </body>
-</html>';
+</html>
+<script src="/mvc-consultas/public/scripts/notificacao.js"></script>';
     }
     
     public function rodape() {

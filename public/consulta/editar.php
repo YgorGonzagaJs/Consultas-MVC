@@ -34,7 +34,7 @@ $acao = "/mvc-consultas/consulta/alterar";
         <div class="ptrn">
             <label for="data_consulta" class="form-label">Data da Consulta:</label>
             <input type="datetime-local" class="form-control" id="data_consulta" name="data_consulta" 
-                   value="<?= str_replace(' ', 'T', $parametro[0]['data_consulta']) ?>" required>
+               value="<?= date('Y-m-d\TH:i', strtotime($parametro[0]['data_consulta'])) ?>" required>
         </div>
         
         <div class="ptrn">
